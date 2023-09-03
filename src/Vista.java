@@ -4,10 +4,15 @@ public class Vista {
     Scanner scn = new Scanner(System.in);
     Controlador controlador = new Controlador();
 
+    /**
+     * @param mostrarMenu() muestra el menú que le permitirá al usuario saber qué opciones tiene
+     * la opción 1 le dejará agregar carros, la opción 2 le mostrará datos de su interés y la opción 3
+     * le permitirá salir del programa.
+     */
     public void mostrarMenu() {
         while (true) {
             System.out.println("Ingresa el número de opción: ");
-            System.out.println("1. Agregar carro\n2. Ver estadísticas");
+            System.out.println("1. Agregar carro\n2. Ver estadísticas\n3. Salir del programa");
             int opcion = scn.nextInt();
 
             switch (opcion) {
@@ -31,18 +36,11 @@ public class Vista {
                     System.out.print("Ingresa el monto total de reparación: ");
                     Double montoTotal = scn.nextDouble();
                     controlador.agregarCarro(placa, marca, linea, modelo, fechaIngreso, fechaIngreso, tipoServicio, factura, montoTotal);
-                    System.out.println(controlador.taller);
                     break;
                 case 2:
-                    
+                    controlador.datosEstadisticos();
                     break;
                 case 3:
-                    
-                    break;
-                case 4:
-                    
-                    break;
-                case 5:
                     System.exit(0);
                     break;
                 default:

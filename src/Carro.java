@@ -2,6 +2,17 @@ public class Carro{
     String placa, marca, linea, modelo, fechaIngreso, propietario, tipoServicio, factura;
     double montoTotal;
 
+    /**
+     * @param placa
+     * @param marca
+     * @param linea
+     * @param modelo
+     * @param fechaIngreso
+     * @param tipoServicio
+     * @param factura
+     * @param montoTotal
+     */
+    
     public Carro(String placa, String marca, String linea, String modelo, String fechaIngreso, 
     String tipoServicio, String factura, double montoTotal) {
         this.placa = placa;
