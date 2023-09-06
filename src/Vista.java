@@ -12,7 +12,7 @@ public class Vista {
     public void mostrarMenu() {
         while (true) {
             System.out.println("Ingresa el número de opción: ");
-            System.out.println("1. Agregar carro\n2. Ver estadísticas\n3. Salir del programa");
+            System.out.println("1. Agregar carro\n2. Ver estadísticas\n3. Mostrar taller\n4. Salir del programa");
             int opcion = scn.nextInt();
 
             switch (opcion) {
@@ -41,6 +41,9 @@ public class Vista {
                     controlador.datosEstadisticos();
                     break;
                 case 3:
+                    System.out.println(controlador.taller);
+                    break;
+                case 4:
                     System.exit(0);
                     break;
                 default:
